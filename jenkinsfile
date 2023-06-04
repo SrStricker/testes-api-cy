@@ -1,20 +1,27 @@
 pipeline{
     agent any
-
+    
+    tools {nodejs "node"}
+    
     stages{
         stage('clonar repositorio'){
             steps{
-                git branch: 'main', url:'https://github.com/SrStricker/testes-api-cy.git'
+                git branch: 'main', url:'https://github.com/SrStricker/testes-e2e-ebac-shop.git'
+            }
+        }
+        stage('subir servidor'){
+            steps{
+                bat 'start'
             }
         }
         stage('instalar dependencias'){
             steps{
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('executar testes'){
             steps{
-                sh 'NO_COLOR=1 npm run cy:run'
+                bat 'npm run cy:run'
             }
         }
     }
