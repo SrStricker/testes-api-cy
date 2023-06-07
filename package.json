@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx serverest",
-    "download":"npm install cypress --save-dev",
     "cy:run": "npx cypress run",
-    "cy:report": "npx mochawesome-merge ./mochawesome-report/mochawesome*.json  > mochawesome-report/report.json && npx marge mochawesome-report/report.json"
+    "cy:report": "npx mochawesome-merge ./mochawesome-report/mochawesome*.json  > mochawesome-report/report.json && npx marge mochawesome-report/report.json",
+    "cy:run-ci": "start-server-and-test start http://localhost:3000/usuarios test "
   },
   "keywords": [],
   "author": "",
