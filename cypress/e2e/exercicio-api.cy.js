@@ -52,7 +52,7 @@ describe('Testes da Funcionalidade Usuários', () => {
           cy.validaçãousuario('Ana Silva', 'ana@ebac.com', 'teste123')
                .then((response) => {
                     expect(response.status).to.equal(400)
-                    expect(response.body.message).to.equal("Este email já está sendo usado")
+                    expect(response.body.message).to.equal('Este email já está sendo usado')
                })
      });
 
