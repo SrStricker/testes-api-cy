@@ -26,7 +26,6 @@
     "mochawesome": "^6.2.2",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^5.2.0",
-    "node": "^20.2.0",
     "serverest": "^2.15.0"
   }
 }
